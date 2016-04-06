@@ -2,14 +2,10 @@
 //Please make sure that those endpoints allow crossdomain calls, or be sure
 //to host this site in the same domain as your API (and set `document.domain` correspondingly)
 var apis = {
-    quantifiedcode : {
-        title: 'QuantifiedCode API',
-        url: 'https://www.quantifiedcode.com/api/v1/github-projects' //replace this with your own API endpoints
-    }
 };
 
 //Replace this with your status page project name
-var githubProject = 'quantifiedcode-status/quantifiedcode-status';
+var githubProject = 'quantifiedcode/status';
 
 //Github URLs
 var issuesApiUrl = 'https://api.github.com/repos/'+githubProject+'/issues?limit=100&sort=created&direction=desc&state=all'
@@ -121,6 +117,7 @@ var StatusList = React.createClass({
 
         var markAsFailed = function(key,xhr){
             console.log(xhr);
+            console.log(xhr.response)
             console.log("An error occcured!")
             d = {}
             d[key] = 'error'
