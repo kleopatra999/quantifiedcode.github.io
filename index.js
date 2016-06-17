@@ -5,7 +5,7 @@ var apis = {
 };
 
 //Replace this with your status page project name
-var githubProject = 'quantifiedcode/status';
+var githubProject = 'quantifiedcode/quantifiedcode.github.io';
 
 //Github URLs
 var issuesApiUrl = 'https://api.github.com/repos/'+githubProject+'/issues?limit=100&sort=created&direction=desc&state=all'
